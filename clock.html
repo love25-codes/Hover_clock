@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <style> 
+    /*recommended to view at 67% */
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+        body{
+            background-color: #c9cbc8;
+        }
+        .container{
+            position: relative;
+            top: 205px;
+            margin: auto;
+            width: 770px;
+            height:770px;
+            border-radius: 50%;
+            border: 29px solid #0c334a;
+             background-color: #aad8e6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+       
+        .line{
+            border: 5px solid #0c334a;
+            position: absolute;
+            height: 79px;
+            width: 9px;
+            margin: 12px;
+        }
+        .line2{
+            position: absolute;
+              bottom: 0;
+        }
+        .line1{
+            position: absolute;
+            top: 0;
+        }
+        .hori{
+            border: 5px solid #0c334a;
+             width: 79px;
+             position: absolute;
+             right: 0;
+             margin: 12px;
+        }
+        .hori2{
+            left: 0;
+        }
+         .quarter{
+            border: 5px solid #0c334a;
+            width: 79px;
+            position: absolute;
+        }
+        .part1{
+            transform: rotate(30deg) translate(-303px,12px);
+        }
+        .part2{
+            transform: rotate(50deg) translate(-303px, -37px);
+        }
+        .part3{
+            transform: rotate(30deg) translate(303px,-12px);
+        }
+        .part4{
+            transform: rotate(50deg) translate(303px, 37px);
+        }
+        .part5{
+             transform: rotate(119deg) translate(-303px,-18px);
+        }
+        .part6{
+            transform: rotate(150deg) translate(-303px) ;
+        }
+        .part7{
+            transform: rotate(119deg) translate(303px,18px);
+        }
+        .part8{
+            transform: rotate(150deg) translate(303px) ;
+        }
+        .box{
+            width: 770px;
+            height: 770px;
+            border-radius: 50%;
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: calc(620px);
+            background-position: center;
+             background-image: url(https://th.bing.com/th/id/R.eabb15dc24c0d2e2e447e72f63e00a9f?rik=9EcEzyfEso0zgQ&riu=http%3a%2f%2fwww.clipartbest.com%2fcliparts%2fRcA%2fEGL%2fRcAEGLR4i.png&ehk=Y18ZfXyIXVRv7KTZjspkvYah67um%2bD7u0JxxBAaerlI%3d&risl=&pid=ImgRaw&r=0); 
+              animation: rotate 5s linear 0s infinite;
+        }
+        @keyframes rotate {
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+             
+        }
+        .box:hover{
+            cursor: pointer;
+            animation-play-state: paused;
+        }
+        .container:hover{
+            transform: scale(1.02);
+            transition: transform 0.2s ease;
+            box-shadow:
+            2px 2px  10px 12px whitesmoke;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+        <div class="hori hori1"></div>
+        <div class="hori hori2"></div>
+        <div class="quarter part1"></div>
+        <div class="quarter part2"></div>
+        <div class="quarter part3"></div>
+        <div class="quarter part4"></div>
+        <div class="quarter part5"></div>
+        <div class="quarter part6"></div>
+        <div class="quarter part7"></div>
+        <div class="quarter part8"></div>
+        <div class="box"></div>
+
+    </div>
+    
+</body>
+</html>
